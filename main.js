@@ -32,12 +32,26 @@ function myFunction() {
     }
     return Swal.fire("Error!", "Password is Wrong", "error");
   } else {
-    //console.log("err");
     Swal.fire("Error!", "Please Check Email and Password!", "error");
   }
 }
 
 function s() {
-  console.log("hi");
   Swal.fire("Error!", "All Fields are Required!", "error");
+}
+
+//Register
+
+function reg() {
+  let regname = document.getElementById("regname");
+
+  let regemail = document.getElementById("regemail");
+
+  let regpassword = document.getElementById("regpassword");
+
+  if (regname.value == "" || regemail.value == "" || regpassword.value == "") {
+    return Swal.fire("Error!", "All Fields are Required!", "error");
+  } else {
+    Swal.fire("Successfully!", "You Successfully Signed In", "success");
+  }
 }
